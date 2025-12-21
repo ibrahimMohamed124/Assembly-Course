@@ -1,0 +1,36 @@
+x86_Assembly_Course/
+│
+├── 01_Setup/
+│   ├── README.md          # شرح تثبيت NASM وMinGW وVS Code
+│   ├── test.asm           # أول برنامج Hello World
+│
+├── 02_Basics/
+│   ├── registers.asm      # شرح واستخدام الRegisters
+│   ├── arithmetic.asm     # جمع، طرح، ضرب، قسمة
+│   ├── logic.asm          # AND, OR, XOR, NOT
+│
+├── 03_ControlFlow/
+│   ├── jumps.asm          # JMP, JE, JNE, ...
+│   ├── loops.asm          # أمثلة While, For
+│   ├── cmp_test.asm       # CMP + Conditional jumps
+│
+├── 04_Memory/
+│   ├── data_segments.asm  # .data, .bss, .text
+│   ├── pointers.asm       # استخدام العناوين
+│   ├── stack.asm          # PUSH, POP, CALL, RET
+│
+├── 05_WindowsAPI/
+│   ├── messagebox.asm     # مثال MessageBox
+│   ├── file_ops.asm       # إنشاء وكتابة ملفات
+│
+├── 06_Advanced/
+│   ├── strings.asm        # التعامل مع النصوص
+│   ├── interrupts.asm     # INT 21h, BIOS
+│   ├── optimization.asm   # تحسين الكود
+│
+├── 07_Projects/
+│   ├── calculator.asm     # مشروع آلة حاسبة
+│   ├── file_counter.asm   # عد الأحرف في ملف
+│
+└── README.md              # جدول المحتوى وشروحات عامة
+

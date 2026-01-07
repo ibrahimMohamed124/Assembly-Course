@@ -20,7 +20,7 @@ global _start
 _start:
     ; prompt first number
     mov eax, 4
-    mov ebx, 1
+    mov ebx, 1 
     mov ecx, msg1
     mov edx, len1
     int 0x80

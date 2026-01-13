@@ -11,43 +11,43 @@ section .data
     newline db 10
 
 section .bss
-    num1 resb 1
-    num2 resb 1
+    num1 resb 2       ; digit + newline
+    num2 resb 2
+    result resb 1
 
 section .text
 global _start
 
 _start:
-    ; prompt first number
+    ; ===== print msg1 =====
     mov eax, 4
     mov ebx, 1
     mov ecx, msg1
     mov edx, len1
-    int 80h
-    
+    int 0x80
 
-    ; read first number
+    ; ===== read num1 =====
     mov eax, 3
     mov ebx, 0
     mov ecx, num1
-    mov edx, 1
-    int 80h
+    mov edx, 2
+    int 0x80
 
-    ; prompt second number
+    ; ===== print msg2 =====
     mov eax, 4
     mov ebx, 1
     mov ecx, msg2
     mov edx, len2
-    int 80h
+    int 0x80
 
-    ; read second number
+    ; ===== read num2 =====
     mov eax, 3
     mov ebx, 0
     mov ecx, num2
-    mov edx, 1
-    int 80h
+    mov edx, 2
+    int 0x80
 
-    ; ASCII → int
+    ; ===== ASCII -> int =====
     mov al, [num1]
     sub al, '0'
     mov bl, al
@@ -55,33 +55,33 @@ _start:
     mov al, [num2]
     sub al, '0'
 
-    ; add
+    ; ===== add =====
     add al, bl
 
-    ; int → ASCII
+    ; ===== int -> ASCII =====
     add al, '0'
-    mov [num1], al
+    mov [result], al
 
-    ; print result
+    ; ===== print result =====
     mov eax, 4
     mov ebx, 1
     mov ecx, msg3
     mov edx, len3
-    int 80h
+    int 0x80
 
     mov eax, 4
     mov ebx, 1
-    mov ecx, num1
+    mov ecx, result
     mov edx, 1
-    int 80h
+    int 0x80
 
     mov eax, 4
     mov ebx, 1
     mov ecx, newline
     mov edx, 1
-    int 80h
+    int 0x80
 
-    ; exit
+    ; ===== exit =====
     mov eax, 1
     xor ebx, ebx
-    int 80h
+    int 0x80

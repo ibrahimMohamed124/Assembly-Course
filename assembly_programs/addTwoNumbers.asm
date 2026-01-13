@@ -24,6 +24,7 @@ _start:
     mov ecx, msg1
     mov edx, len1
     int 80h
+    
 
     ; read first number
     mov eax, 3
@@ -74,7 +75,6 @@ _start:
     mov edx, 1
     int 80h
 
-    ; newline
     mov eax, 4
     mov ebx, 1
     mov ecx, newline

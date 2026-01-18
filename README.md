@@ -17,8 +17,6 @@ This project focuses on **core CPU concepts**, **instruction behavior**, and fou
 - Loops, conditions, and jumps
 - Function calls and stack frames
 - Calling conventions (32-bit & 64-bit)
-- How C code translates into x86 Assembly
-- Reading and understanding disassembly
 - How Linux interacts with assembly via syscalls
 
 ---
@@ -44,10 +42,6 @@ This project focuses on **core CPU concepts**, **instruction behavior**, and fou
 
 ## 🛠 Tools Used
 - **NASM** – Assembler
-- **GCC / Clang** – Compilation & disassembly
-- **Ghidra** – Static analysis
-- **HxD** – Hex editor
-- **Compiler Explorer** – Assembly inspection
 - **Linux / WSL** – Execution environment
 
 ---
